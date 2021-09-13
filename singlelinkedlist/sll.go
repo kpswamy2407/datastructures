@@ -67,8 +67,8 @@ func (l *LinkedList) InsertAfter(prevNode *Node, data interface{}) error {
 	}
 	node := &Node{
 		data: data,
-		next: prevNode,
 	}
+	node.next = prevNode.next
 	prevNode.next = node
 	l.length++
 	return nil

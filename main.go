@@ -12,7 +12,8 @@ func main() {
 	linkedList.Insert(14)
 	linkedList.Insert(24)
 	linkedList.InsertAtFirst("Welcome home")
-	fmt.Println(linkedList.FindNode(14))
+	previous := linkedList.FindNode(14)
+	linkedList.InsertAfter(previous, 1)
 	fmt.Println(linkedList.Traverse()...)
 
 }
